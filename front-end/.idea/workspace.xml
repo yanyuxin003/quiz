@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79c0a849-b971-4635-a57c-c6bd43a18ffd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/GoodController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/domain/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/domain/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/po/GoodsPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/po/OrderPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/repository/GoodsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/GoodsControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/OrderControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/product_image_placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/shopping.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-end/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/GoodsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/GoodsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/OrderControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/OrderControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shopItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shopItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/shopItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/shopItem.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,11 +147,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="740" />
-    <option name="y" value="65" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="742" />
+    <option name="y" value="67" />
     <option name="width" value="750" />
-    <option name="height" value="1090" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -275,15 +253,15 @@
       <option name="presentableId" value="Default" />
       <updated>1601012015371</updated>
       <workItem from="1601012016619" duration="9490000" />
-      <workItem from="1601026258536" duration="256000" />
+      <workItem from="1601026258536" duration="639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9746000" />
+    <option name="totallyTimeSpent" value="10129000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25955734" />
