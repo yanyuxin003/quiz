@@ -60,7 +60,7 @@ public class GoodsControllerTest {
         mockMvc.perform(get("/goodList"))
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].name", is("iPhone11")))
-                .andExpect(jsonPath("$[0].price", is(5999)))
+                .andExpect(jsonPath("$[0].price", is(5999.0)))
                 .andExpect(jsonPath("$[1].name", is("apple")))
                 .andExpect(jsonPath("$[1].price", is(3.00)))
                 .andExpect(status().isOk());
@@ -70,8 +70,8 @@ public class GoodsControllerTest {
     @Test
     @Order(2)
     void should_add_good_to_order_list() throws Exception {
-        int Id = goodsRepository.findAll().get(1).getId();
-        mockMvc.perform(post("/goods/"+Id))
+        int Id = goodsRepository.findAll().get(0).getId();
+        mockMvc.perform(post("/good/"+Id))
                 .andExpect(status().isOk());
         List<OrderPO> orders = orderRepository.findAll();
         assertEquals(2, orders.size());
@@ -84,19 +84,10 @@ public class GoodsControllerTest {
         String requestJson = objectMapper.writeValueAsString(goods);
         mockMvc.perform(post("/goods/").content(requestJson).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
-        mockMvc.perform(get("/goods"))
+        mockMvc.perform(get("/goodList"))
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[2].name", is("paper")))
                 .andExpect(jsonPath("$[2].price", is(0.3)))
                 .andExpect(status().isOk());
-    }
-
-    @Test
-    @Order(4)
-    void should_add_when_name_exists_then_not_add() throws Exception {
-        Goods goods = Goods.builder().name("paper").price(0.3).goodunit("piece").imgUrl("../images/paper").build();
-        String requestJson = objectMapper.writeValueAsString(goods);
-        mockMvc.perform(post("/products/").content(requestJson).contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isBadRequest());
     }
 }

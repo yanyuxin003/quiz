@@ -5,6 +5,7 @@ import com.twuc.shopping.po.OrderPO;
 import com.twuc.shopping.repository.GoodsRepository;
 import com.twuc.shopping.repository.OrderRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,20 +49,22 @@ public class OrderControllerTest {
     }
 
     @Test
+    @Order(1)
     void should_get_order() throws Exception {
         mockMvc.perform(get("/orderList"))
-                .andExpect(jsonPath("$", hasSize(2)))
+                .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].name", is("apple")))
                 .andExpect(jsonPath("$[0].count", is(2)))
                 .andExpect(status().isOk());
     }
 
     @Test
+    @Order(2)
     void should_delete_order() throws Exception {
         int orderDeleteId = orderRepository.findAll().get(0).getId();
         mockMvc.perform(delete("/order/" + orderDeleteId))
                 .andExpect(status().isOk());
-        assertEquals(1, orderRepository.findAll().size());
+        assertEquals(0, orderRepository.findAll().size());
     }
 }
 
