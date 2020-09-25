@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79c0a849-b971-4635-a57c-c6bd43a18ffd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/GoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/GoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/GoodsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/GoodsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/OrderControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/OrderControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
