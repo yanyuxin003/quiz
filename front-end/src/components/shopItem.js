@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import imgURL from '../assets/product_image_placeholder.png';
-import '../styles/shopItem.scss';
+import '../styles/shopItem.css';
 
 class ShopItem extends Component {
   render() {
