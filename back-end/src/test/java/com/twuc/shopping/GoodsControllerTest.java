@@ -44,18 +44,14 @@ public class GoodsControllerTest {
 
     @BeforeEach
     void setup(){
+        goodsRepository.deleteAll();
+        orderRepository.deleteAll();
         GoodsPO goodsPO = GoodsPO.builder().name("iPhone11").price(5999).goodunit("ge").imgUrl("../images/iPhone11.jpg").build();
         goodsRepository.save(goodsPO);
         GoodsPO goodsPO_2 = GoodsPO.builder().name("apple").price(3.00).goodunit("kg").imgUrl("../images/apple.jpg").build();
         goodsRepository.save(goodsPO_2);
         OrderPO orderPO= OrderPO.builder().name("apple").count(2).price(3.00).goodunit("kg").build();
         orderRepository.save(orderPO);
-    }
-
-    @AfterEach
-    void set_clean(){
-        goodsRepository.deleteAll();
-        orderRepository.deleteAll();
     }
 
     @Test
@@ -70,11 +66,6 @@ public class GoodsControllerTest {
                 .andExpect(status().isOk());
     }
 
-    @Test
-    @Order(1)
-    void should() throws Exception {
-
-    }
 
     @Test
     @Order(2)
@@ -99,5 +90,13 @@ public class GoodsControllerTest {
                 .andExpect(jsonPath("$[2].price", is(0.3)))
                 .andExpect(status().isOk());
     }
-    
+
+    @Test
+    @Order(4)
+    void should_add_when_name_exists_then_not_add() throws Exception {
+        Goods goods = Goods.builder().name("paper").price(0.3).goodunit("piece").imgUrl("../images/paper").build();
+        String requestJson = objectMapper.writeValueAsString(goods);
+        mockMvc.perform(post("/products/").content(requestJson).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest());
+    }
 }
