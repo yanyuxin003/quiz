@@ -26,7 +26,7 @@ public class GoodController {
         return ResponseEntity.ok(goodsRepository.findAll());
     }
 
-    @GetMapping("/good/{id}")
+    @PostMapping("/good/{id}")
     public ResponseEntity findGoodByIdAddAddToOrder(@PathVariable int id){
         return ResponseEntity.ok(orderController.addToOrder(id));
     }
