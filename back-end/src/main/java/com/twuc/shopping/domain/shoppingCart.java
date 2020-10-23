@@ -11,8 +11,13 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 public class shoppingCart {
+    @Id
+    @GeneratedValue
+    private int id;
     @NotNull
     private String name;
     @NotNull
     private int number;
+    @NotNull
+    private double price;
 }
