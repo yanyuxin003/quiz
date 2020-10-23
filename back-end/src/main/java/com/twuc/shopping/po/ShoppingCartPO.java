@@ -1,5 +1,6 @@
 package com.twuc.shopping.po;
 
+import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,21 +10,19 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "shoppingCart")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class OrderPO {
+public class ShoppingCartPO {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private int id;
     @NotNull
     private String name;
     @NotNull
-    private String goodunit;
+    private int number;
     @NotNull
     private double price;
-    @NotNull
-    private int count;
 }
