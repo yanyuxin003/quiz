@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import '../styles/goods.css';
+import '../styles/addgoods.css';
+import { Input } from 'antd';
 
-
-class Goods extends Component {
+class addGoods extends Component {
     State= ({
         handleFlag: false,
     })
@@ -34,15 +34,15 @@ class Goods extends Component {
         let url = JSON.stringify(this.props.url);
         console.log(url)
         return (
-            <section className="good">
-                <img className="image" alt="goodspicture" src={this.props.good.imgUrl} ></img>
-                       <div className="good-title">
-                          <h3>{this.props.good.name}</h3>
-                         <p>单价:{this.props.good.price}元/{this.props.good.goodunit}</p>
-                     </div>
-                    <button className='addButton' onChange={this.addGood}>+</button>
-            </section>
+            <div className="addgood">
+              <h2>添加商品</h2>
+                <div className="add">名称：<Input placeholder="" /></div>
+                <div className="add">价格：<Input placeholder="" /></div>
+                <div className="add">单位：<Input placeholder="" /></div>
+                <div className="add">图片：<Input placeholder="" /></div>
+                <div className="tijiao"><button className="add" onChange={this.addGood}>提交</button> </div>
+           </div>
         )
     }
 }
-export default Goods;
+export default addGoods;

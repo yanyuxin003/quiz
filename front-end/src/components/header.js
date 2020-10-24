@@ -17,9 +17,9 @@ class Header extends Component {
                     <Link className='toLink' to='/orders'>订单</Link>
                 </p>
             </div>
-            <div className="addProduct">
+            <div className="add-product">
                 <p>
-                    <Link className='toLink' to='/addOrder'>添加商品</Link>
+                    <Link className='toLink' to='/addgoods'>添加商品</Link>
                 </p>
             </div>
         </div>
