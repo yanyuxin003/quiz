@@ -19,12 +19,12 @@ public class ShoppingCartController {
     }
 
     @GetMapping("/shoppingcart")
-    public ResponseEntity<List<ShoppingCartPO>> getOrders(){
+    public ResponseEntity<List<ShoppingCartPO>> getShoppingCart(){
         return shoppingCartService.getCarts();
     }
 
     @DeleteMapping("/shoppingcart/{id}")
-    public ResponseEntity<List<ShoppingCartPO>> deleteOrder(@PathVariable int id){
+    public ResponseEntity<List<ShoppingCartPO>> deleteShoppingCart(@PathVariable int id){
         return shoppingCartService.deleteCarts(id);
     }
 

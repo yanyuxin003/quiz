@@ -14,5 +14,11 @@ public class shoppingCart {
     @NotNull
     private String name;
     @NotNull
-    private int number;
+    private double price;
+    @NotNull
+    private int count;
+    @NotNull
+    private String goodunit;
+    @NotNull
+    private String imgUrl;
 }

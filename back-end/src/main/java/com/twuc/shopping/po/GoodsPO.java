@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 public class GoodsPO {
     @Id
     @GeneratedValue
-    private int Id;
+    private int id;
     @NotNull
     private String name;
     @NotNull

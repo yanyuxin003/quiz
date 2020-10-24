@@ -44,12 +44,15 @@ public class ShoppingCartService {
         if (goodsPO.isPresent()) {
             Optional<ShoppingCartPO> findCart = shoppingCartRepository.findByName(goodsPO.get().getName());
             if (findCart.isPresent()) {
-                findCart.get().setNumber(findCart.get().getNumber() + 1);
+                findCart.get().setId(findCart.get().getId() + 1);
                 shoppingCartRepository.save(findCart.get());
             } else {
                 shoppingCartRepository.save(ShoppingCartPO.builder()
-                        .id(id).name(goodsPO.get().getName()).price(goodsPO.get().getPrice())
-                        .number(1).build());
+                        .id(id).name(goodsPO.get().getName())
+                        .price(goodsPO.get().getPrice())
+                        .goodunit(goodsPO.get().getGoodunit())
+                        .imgUrl(goodsPO.get().getImgUrl())
+                        .count(1).build());
             }
             return ResponseEntity.ok().build();
         }

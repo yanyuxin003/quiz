@@ -22,7 +22,11 @@ public class ShoppingCartPO {
     @NotNull
     private String name;
     @NotNull
-    private int number;
+    private String goodunit;
     @NotNull
     private double price;
+    @NotNull
+    private int count;
+    @NotNull
+    private String imgUrl;
 }
