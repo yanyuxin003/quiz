@@ -67,15 +67,15 @@ public class GoodsControllerTest {
     }
 
 
-    @Test
-    @Order(2)
-    void should_add_good_to_order_list() throws Exception {
-        int Id = goodsRepository.findAll().get(0).getId();
-        mockMvc.perform(post("/goods/"+Id))
-                .andExpect(status().isOk());
-        List<OrderPO> orders = orderRepository.findAll();
-        assertEquals(2, orders.size());
-    }
+//    @Test
+//    @Order(2)
+//    void should_add_good_to_order_list() throws Exception {
+//        int Id = goodsRepository.findAll().get(0).getId();
+//        mockMvc.perform(post("/goods/"+Id))
+//                .andExpect(status().isOk());
+//        List<OrderPO> orders = orderRepository.findAll();
+//        assertEquals(2, orders.size());
+//    }
 
     @Test
     @Order(3)

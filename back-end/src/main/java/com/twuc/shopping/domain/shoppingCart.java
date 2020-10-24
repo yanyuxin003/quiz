@@ -19,6 +19,4 @@ public class shoppingCart {
     private int count;
     @NotNull
     private String goodunit;
-    @NotNull
-    private String imgUrl;
 }

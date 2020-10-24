@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ShoppingCartTest {
+public class ShoppingCartControllerTest {
     ObjectMapper objectMapper = new ObjectMapper();
     @Autowired
     MockMvc mockMvc;
@@ -73,8 +73,10 @@ public class ShoppingCartTest {
         int Id = goodsRepository.findAll().get(0).getId();
         mockMvc.perform(post("/goods/"+Id))
                 .andExpect(status().isOk());
-        List<OrderPO> orders = orderRepository.findAll();
-        assertEquals(2, orders.size());
+        List<ShoppingCartPO> shoppingCartPOS = shoppingCartRepository.findAll();
+        assertEquals(2, shoppingCartPOS.size());
     }
+
+
 
 }

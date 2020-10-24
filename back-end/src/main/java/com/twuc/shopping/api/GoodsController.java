@@ -29,7 +29,7 @@ public class GoodsController {
 
     @PostMapping("/goods/{id}")
     @CrossOrigin
-    public ResponseEntity findGoodByIdAddAddToOrder(@PathVariable int id){
+    public ResponseEntity findGoodByIdAndAddToOrder(@PathVariable int id){
         return shoppingCartService.addToCart(id);
     }
 
